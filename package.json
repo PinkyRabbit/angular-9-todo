@@ -6,12 +6,15 @@
   },
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "npm run heroku && npm run express",
+    "express": "node server.js",
+    "serve": "ng serve",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "heroku-postbuild": "ng build --prod"
+    "postinstall": "ng build --aot --prod",
+    "heroku": "ng build --prod"
   },
   "private": true,
   "dependencies": {
@@ -24,6 +27,7 @@
     "@angular/platform-browser-dynamic": "~9.0.0",
     "@angular/router": "~9.0.0",
     "bootstrap": "^4.4.1",
+    "express": "^4.17.1",
     "rxjs": "~6.5.4",
     "tslib": "^1.10.0",
     "zone.js": "~0.10.2"
