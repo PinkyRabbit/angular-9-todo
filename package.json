@@ -6,8 +6,8 @@
   },
   "scripts": {
     "ng": "ng",
-    "start": "npm run heroku && npm run express",
-    "express": "node server.js",
+    "start": "node server.js",
+    "express": "npm run heroku && npm start",
     "serve": "ng serve",
     "build": "ng build",
     "test": "ng test",
